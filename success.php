@@ -26,6 +26,20 @@
         </style>
     </head>
     <body>
-        <h1>SEE YOU THERE!</h1>
+        <?php
+            switch($_GET['status']){
+                case 'Attending':
+                case 'Attending With Plus One':
+                    $message = 'SEE YOU THERE!';
+                    break;
+                case 'Not Sure':
+                    $message = 'I HOPE YOU DECIDE TO COME! :)';
+                    break;
+                case 'Not Going':
+                    $message = 'I HOPE YOU\'LL COME ON MY NEXT BIRTHDAY!';
+                    break;
+            }
+        ?>
+        <h1><?php echo $message; ?></h1>
     </body>
 </html>
