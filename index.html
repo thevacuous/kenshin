@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <!-- META TAGS -->
+        <title>Meep Merp</title>
+        <meta property="og:image" content="http://www.meepmerp.xyz/img/logo.jpg"/>
+        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" >
+        <meta name="description" content="This site is still under construnction..."/>
+        <meta name="keywords" content="meepmerp, meep merp, nico adrian macarasig">
+        <!-- VENDOR STYLES -->
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css"/>
+        <link rel="stylesheet" type="text/css" href="css/jquery.fullpage.min.css"/>
+        <!-- MY STYLES -->
+        <link rel="stylesheet" type="text/css" href="css/main.css"/>
+
+        <!-- VENDOR SCRIPTS -->
+        <script type="text/javascript" src="js/jquery-1.12.2.min.js"></script>
+        <script type="text/javascript" src="js/jquery.fullpage.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div id="fullpage">
+            <div class="section active" id="header">
+                <img class="invited" src="img/invited.png"/>
+                <img class="kenshin" src="img/kenshin.png"/>
+            </div>
+            <div class="section" id="intro">
+                <p class="details hideme">
+                    DATE<br/>
+                    <span>JULY 23, 2016</span><br/>
+                    TIME<br/>
+                    <span>5:00 PM</span><br/>
+                    VENUE<br/>
+                    <span>ONE OASIS</span><br/>
+                </p>
+                <form class="hideme" method="post" action="attend.php" onsubmit="return checkname()">
+                    <div class="row">
+                        <div class="col-md-offset-2 col-md-8">
+                            <input type="text" name="name" id="name" placeholder="NAME"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-offset-3 col-md-3">
+                            <button class="attend" name="attend" value="Alone">
+                                Attending
+                            </button>
+                        </div>
+                        <div class="col-md-3">
+                            <button class="attendplusone" name="attend" value="With +1">
+                                Attending with +1
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- MY SCRIPTS -->
+        <script type="text/javascript" src="js/main.js"></script>
+        <script>
+            function checkname(){
+                if($('#name').val() != ""){
+                    return true;
+                }
+                else{
+                    alert('Please enter your name.');
+                    return false;
+                }
+            }
+        </script>
+    </body>
+</html>

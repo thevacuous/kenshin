@@ -1,0 +1,85 @@
+@mixin background-size($size) {
+  -moz-background-size: $size;
+  -webkit-background-size: $size;
+  -o-background-size: $size;
+  background-size: $size;
+}
+
+html{
+    padding: 0;
+    margin: 0;
+
+    body{
+
+        #header{
+            background: url('../img/intro-bg.jpg') no-repeat center center #F87D09;
+            @include background-size(cover);
+            height: 100vh;
+            position: relative;
+
+            .invited{
+                position: absolute;
+                top: 10vh;
+                left: 10vw;
+                width: 25vw;
+            }
+
+            .kenshin{
+                position: absolute;
+                left: 10vw;
+                bottom: 10vh;
+                width: 50vw;
+            }
+        }
+
+        #intro{
+            background: url('../img/bg.jpg') no-repeat center center #2e2b39;
+            @include background-size(cover);
+            height: 100vh;
+
+            .details{
+                text-align: center;
+                color: #fff;
+                font-size: 20px;
+                text-shadow: #000 2px 2px 2px;
+
+                span{
+                    font-size: 40px;
+                }
+            }
+
+            #name{
+                width: 100%;
+                box-shadow: 2px 2px 4px 0px #000;
+                border: none;
+                padding: 10px;
+                font-size: 30px;
+                text-align: center;
+                margin-top: 40px;
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+
+            button{
+                width: 100%;
+                padding: 10px;
+                border: none;
+                background: #314f78;
+                color: #fff;
+                font-weight: bold;
+                margin-top: 20px;
+                box-shadow: 2px 2px 4px 0px #000;
+                font-size: 18px;
+
+                &:hover{
+                    background: #4b73a9;
+                }
+            }
+        }
+
+        .hideme
+        {
+            opacity:0;
+        }
+    }
+}
